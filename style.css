@@ -1,0 +1,143 @@
+:root {
+  --background: #f7f8fa;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #657086;
+  --line: #e3e7ee;
+  --accent: #3157d5;
+  --shadow: 0 12px 30px rgba(23, 32, 51, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  line-height: 1.65;
+}
+
+.container {
+  width: min(860px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 88px 0 40px;
+}
+
+.hero {
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 9vw, 5.6rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+}
+
+section {
+  padding-top: 46px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card {
+  margin-bottom: 16px;
+  padding: 24px 26px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.card-heading span,
+.card p {
+  color: var(--muted);
+}
+
+.card p {
+  margin: 7px 0 0;
+}
+
+.research-card {
+  border-left: 4px solid var(--accent);
+}
+
+.research-card .research-name {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 750;
+}
+
+.research-card .research-cn {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(100% - 28px, 860px);
+    padding-top: 54px;
+  }
+
+  .card-heading {
+    display: block;
+  }
+
+  .card-heading span {
+    display: inline-block;
+    margin-top: 5px;
+  }
+}
